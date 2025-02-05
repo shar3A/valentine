@@ -40,14 +40,13 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Hidden section initially */
+/* The thank-you section should remain hidden initially */
 .hidden {
     display: none;
 }
 
-/* The thank-you section */
+/* The thank-you section when revealed */
 #thank-you-section {
-    display: none;
     height: 100vh;
     background-color: #ffccf9;
     display: flex;
