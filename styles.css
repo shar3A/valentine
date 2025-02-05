@@ -62,7 +62,7 @@ h2 {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Floating bouquets animation */
+/* Floating flowers animation */
 #flowers-container {
     position: absolute;
     width: 100%;
@@ -71,30 +71,16 @@ h2 {
 }
 
 .flower {
-    width: 60px;
-    height: 60px;
-    background: url('https://i.imgur.com/JIVG9Ii.png') no-repeat center center / contain;  /* Bouquet image */
+    width: 30px;
+    height: 30px;
+    background-color: #ff69b4;
+    border-radius: 50%;
     position: absolute;
     animation: floatUp 5s linear infinite;
+    box-shadow: 0 0 10px #ff69b4;
 }
 
 /* Animations */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes floatUp {
-    0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(-10vh) scale(1);
-        opacity: 1;
-    }
-}
+        opacity: 0
