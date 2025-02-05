@@ -13,10 +13,10 @@ noButton.addEventListener("click", () => {
 yesButton.addEventListener("click", () => {
     mainContent.classList.add("hidden");  // Hide the main content
     celebration.classList.remove("hidden");  // Show the celebration
-    generateFlowers();  // Start the floating flowers animation
+    generateFlowers();  // Start the floating bouquets animation
 });
 
-// Function to create floating flowers
+// Function to create floating bouquets
 function generateFlowers() {
     for (let i = 0; i < 30; i++) {
         const flower = document.createElement("div");
