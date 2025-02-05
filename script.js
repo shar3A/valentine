@@ -6,7 +6,7 @@ const thankYouSection = document.getElementById("thank-you-section");
 // When "Yes" is clicked, hide the question and show the thank-you message
 yesButton.addEventListener("click", () => {
     mainContent.classList.add("hidden");  // Hide the main content
-    thankYouSection.classList.remove("hidden");  // Show thank-you section
+    thankYouSection.classList.remove("hidden");  // Show the thank-you section
 });
 
 // Move the "No" button randomly on click
