@@ -40,23 +40,28 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Thank-you section is hidden initially */
-#celebration {
+/* Hidden section initially */
+.hidden {
+    display: none;
+}
+
+/* The thank-you section */
+#thank-you-section {
     display: none;
     height: 100vh;
     background-color: #ffccf9;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-h2 {
-    font-size: 3rem;
-    color: #ff69b4;
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Animations */
+h1, p {
+    color: #ff69b4;
+}
+
+/* Fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
