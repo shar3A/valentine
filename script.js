@@ -3,12 +3,12 @@ const noButton = document.getElementById("no-btn");
 const mainContent = document.getElementById("main-content");
 const celebration = document.getElementById("celebration");
 
-// Handle "No" button click
+// Handle "No" button click (Moves it around the screen)
 noButton.addEventListener("click", () => {
     moveNoButton();
 });
 
-// Handle "Yes" button click
+// Handle "Yes" button click (Hide the question and show thank-you message)
 yesButton.addEventListener("click", () => {
     mainContent.style.display = "none";  // Hide the main content
     celebration.style.display = "flex";  // Show the thank-you section
