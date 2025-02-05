@@ -3,16 +3,16 @@ const noButton = document.getElementById("no-btn");
 const mainContent = document.getElementById("main-content");
 const thankYouSection = document.getElementById("thank-you-section");
 
-// When "Yes" is clicked, show the thank-you section
+// When "Yes" is clicked, hide the question and show the thank-you message
 yesButton.addEventListener("click", () => {
-    mainContent.style.display = "none";  // Hide the question
-    thankYouSection.style.display = "flex";  // Show the thank-you section
+    mainContent.classList.add("hidden");  // Hide the main content
+    thankYouSection.classList.remove("hidden");  // Show thank-you section
 });
 
-// Move the "No" button randomly
+// Move the "No" button randomly on click
 noButton.addEventListener("click", () => {
-    const randomTop = Math.random() * 80;  // Random vertical position
-    const randomLeft = Math.random() * 80;  // Random horizontal position
+    const randomTop = Math.random() * 80;
+    const randomLeft = Math.random() * 80;
 
     noButton.style.position = "absolute";
     noButton.style.top = `${randomTop}vh`;
