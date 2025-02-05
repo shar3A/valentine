@@ -62,7 +62,7 @@ h2 {
     animation: fadeIn 1.5s ease-in;
 }
 
-/* Flowers floating animation */
+/* Floating bouquets animation */
 #flowers-container {
     position: absolute;
     width: 100%;
@@ -71,9 +71,9 @@ h2 {
 }
 
 .flower {
-    width: 40px;
-    height: 40px;
-    background: url('https://i.imgur.com/X0MbN6L.png') no-repeat center center / contain;
+    width: 60px;
+    height: 60px;
+    background: url('https://i.imgur.com/JIVG9Ii.png') no-repeat center center / contain;  /* Bouquet image */
     position: absolute;
     animation: floatUp 5s linear infinite;
 }
