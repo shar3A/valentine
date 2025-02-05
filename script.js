@@ -2,9 +2,7 @@ const yesButton = document.getElementById("yes-btn");
 const noButton = document.getElementById("no-btn");
 const mainContent = document.getElementById("main-content");
 const celebration = document.getElementById("celebration");
-const heartsContainer = document.getElementById("hearts-container");
-
-let yesButtonSize = 1.5;
+const flowersContainer = document.getElementById("flowers-container");
 
 // Handle "No" button click
 noButton.addEventListener("click", () => {
@@ -15,24 +13,24 @@ noButton.addEventListener("click", () => {
 yesButton.addEventListener("click", () => {
     mainContent.classList.add("hidden");  // Hide the main content
     celebration.classList.remove("hidden");  // Show the celebration
-    generateHearts();  // Start the floating hearts animation
+    generateFlowers();  // Start the floating flowers animation
 });
 
-// Function to create floating hearts
-function generateHearts() {
+// Function to create floating flowers
+function generateFlowers() {
     for (let i = 0; i < 30; i++) {
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.style.left = `${Math.random() * 100}vw`;
-        heart.style.animationDelay = `${Math.random() * 2}s`;
-        heart.style.animationDuration = `${3 + Math.random() * 2}s`;
-        heartsContainer.appendChild(heart);
+        const flower = document.createElement("div");
+        flower.className = "flower";
+        flower.style.left = `${Math.random() * 100}vw`;
+        flower.style.animationDelay = `${Math.random() * 2}s`;
+        flower.style.animationDuration = `${4 + Math.random() * 2}s`;
+        flowersContainer.appendChild(flower);
     }
 }
 
 // Function to move the "No" button randomly
 function moveNoButton() {
-    const randomTop = Math.random() * 80;  // 80% max to keep it in view
+    const randomTop = Math.random() * 80;  // Keep it within the screen view
     const randomLeft = Math.random() * 80;
 
     noButton.style.position = "absolute";
