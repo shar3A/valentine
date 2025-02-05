@@ -2,8 +2,6 @@ body {
     background-color: #ffe4e1;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     text-align: center;
-    padding: 0;
-    margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,7 +15,6 @@ body {
 h1 {
     font-size: 3rem;
     color: #ff69b4;
-    animation: fadeIn 2s ease-in;
 }
 
 .button-container {
@@ -27,11 +24,9 @@ h1 {
 button {
     padding: 15px 30px;
     font-size: 1.5rem;
-    margin: 10px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.4s ease;
 }
 
 #yes-btn {
@@ -42,49 +37,4 @@ button {
 #no-btn {
     background-color: #ff6a6a;
     color: white;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-/* Celebration section (hidden by default) */
-#celebration {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#thank-you-msg {
-    font-size: 2.5rem;
-    color: #ff69b4;
-    margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in;
-}
-
-/* Plushie animation */
-#plushie {
-    width: 200px;
-    animation: bounceIn 1.5s ease-in-out;
-}
-
-/* Keyframes for animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes bounceIn {
-    from {
-        transform: translateY(-50px) scale(0.5);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-    }
 }
