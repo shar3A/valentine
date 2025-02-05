@@ -39,6 +39,7 @@ button {
 
 #yes-btn {
     background-color: #ff1493;
+    transition: transform 0.3s ease-in-out;  /* Smooth scaling animation */
 }
 
 button:hover {
@@ -50,10 +51,9 @@ button:hover {
     display: none;
 }
 
-/* The thank-you section style */
+/* The thank-you section */
 #thank-you-section {
     background-color: #ffccf9;
-    animation: fadeIn 1.5s ease-in;
 }
 
 h1, p {
