@@ -1,5 +1,8 @@
 const yesButton = document.getElementById("yes-btn");
 const noButton = document.getElementById("no-btn");
+const mainContent = document.getElementById("main-content");
+const celebration = document.getElementById("celebration");
+const heartsContainer = document.getElementById("hearts-container");
 
 let yesButtonSize = 1.5;
 
@@ -17,5 +20,19 @@ noButton.addEventListener("click", () => {
 
 // Handle "Yes" button click
 yesButton.addEventListener("click", () => {
-    alert("YAYYYY THANK YOUUU BABYYY BE READYYYY 😘💖");
+    mainContent.classList.add("hidden");
+    celebration.classList.remove("hidden");
+    generateHearts();
 });
+
+// Function to create floating hearts
+function generateHearts() {
+    for (let i = 0; i < 30; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.animationDelay = `${Math.random() * 2}s`;
+        heart.style.animationDuration = `${3 + Math.random() * 2}s`;
+        heartsContainer.appendChild(heart);
+    }
+}
