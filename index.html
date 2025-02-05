@@ -1,26 +1,27 @@
-const yesButton = document.getElementById("yes-btn");
-const noButton = document.getElementById("no-btn");
-const mainContent = document.getElementById("main-content");
-const thankYouSection = document.getElementById("thank-you-section");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine, Gaelle 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main question section -->
+    <div class="full-screen" id="main-content">
+        <h1>Will you be my Valentine, Gaelle? 💘</h1>
+        <div class="button-container">
+            <button id="yes-btn">Yes 💖</button>
+            <button id="no-btn">No 💔</button>
+        </div>
+    </div>
 
-let currentYesButtonSize = 1;  // Starting size multiplier for the Yes button
+    <!-- Hidden thank-you section -->
+    <div id="thank-you-section" class="full-screen hidden">
+        <h1>YAYYYY THANK YOUUU BABYYY 😘💖</h1>
+        <p>You’ve made my day extra special! 🌸💐</p>
+    </div>
 
-// When "Yes" is clicked, hide the question and show the thank-you message
-yesButton.addEventListener("click", () => {
-    mainContent.classList.add("hidden");  // Hide the main content
-    thankYouSection.classList.remove("hidden");  // Show the thank-you section
-});
-
-// Move the "No" button randomly on click and grow the "Yes" button
-noButton.addEventListener("click", () => {
-    // Move the No button randomly
-    const randomTop = Math.random() * 80;
-    const randomLeft = Math.random() * 80;
-    noButton.style.position = "absolute";
-    noButton.style.top = `${randomTop}vh`;
-    noButton.style.left = `${randomLeft}vw`;
-
-    // Increase the size of the Yes button
-    currentYesButtonSize += 0.2;  // Increase the size multiplier
-    yesButton.style.transform = `scale(${currentYesButtonSize})`;
-});
+    <script src="script.js" defer></script>
+</body>
+</html>
