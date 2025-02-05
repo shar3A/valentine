@@ -4,6 +4,7 @@ body {
     text-align: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -72,7 +73,7 @@ h2 {
 .flower {
     width: 40px;
     height: 40px;
-    background: url('https://i.imgur.com/8waICqe.png') no-repeat center center / contain;
+    background: url('https://i.imgur.com/X0MbN6L.png') no-repeat center center / contain;
     position: absolute;
     animation: floatUp 5s linear infinite;
 }
@@ -82,3 +83,18 @@ h2 {
     from {
         opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 1;
+    }
+}
