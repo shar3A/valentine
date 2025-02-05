@@ -29,8 +29,7 @@ button {
     cursor: pointer;
     background-color: #ff6a6a;
     color: white;
-    transition: transform 0.3s, top 0.3s, left 0.3s;
-    position: relative;
+    transition: transform 0.3s;
 }
 
 #yes-btn {
@@ -41,46 +40,28 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Celebration section */
+/* Thank-you section is hidden initially */
 #celebration {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: none;
     height: 100vh;
     background-color: #ffccf9;
-}
-
-.hidden {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
     font-size: 3rem;
     color: #ff69b4;
-    margin-bottom: 20px;
     animation: fadeIn 1.5s ease-in;
-}
-
-/* Floating flowers animation */
-#flowers-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.flower {
-    width: 30px;
-    height: 30px;
-    background-color: #ff69b4;
-    border-radius: 50%;
-    position: absolute;
-    animation: floatUp 5s linear infinite;
-    box-shadow: 0 0 10px #ff69b4;
 }
 
 /* Animations */
 @keyframes fadeIn {
     from {
-        opacity: 0
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
