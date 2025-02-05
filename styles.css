@@ -7,8 +7,13 @@ body {
     overflow: hidden;
 }
 
-.container {
-    text-align: center;
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -40,19 +45,14 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* The thank-you section should remain hidden initially */
+/* Hidden section initially */
 .hidden {
     display: none;
 }
 
-/* The thank-you section when revealed */
+/* The thank-you section style */
 #thank-you-section {
-    height: 100vh;
     background-color: #ffccf9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     animation: fadeIn 1.5s ease-in;
 }
 
