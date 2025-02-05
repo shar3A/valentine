@@ -8,21 +8,14 @@ let yesButtonSize = 1.5;
 
 // Handle "No" button click
 noButton.addEventListener("click", () => {
-    yesButtonSize += 0.5;
-    yesButton.style.fontSize = `${yesButtonSize}rem`;
-
-    if (yesButtonSize >= 10) {
-        yesButton.style.fontSize = "100vh";
-        yesButton.innerText = "Yes! 💞";
-        noButton.style.display = "none";
-    }
+    moveNoButton();
 });
 
 // Handle "Yes" button click
 yesButton.addEventListener("click", () => {
-    mainContent.classList.add("hidden");
-    celebration.classList.remove("hidden");
-    generateHearts();
+    mainContent.classList.add("hidden");  // Hide the main content
+    celebration.classList.remove("hidden");  // Show the celebration
+    generateHearts();  // Start the floating hearts animation
 });
 
 // Function to create floating hearts
@@ -35,4 +28,14 @@ function generateHearts() {
         heart.style.animationDuration = `${3 + Math.random() * 2}s`;
         heartsContainer.appendChild(heart);
     }
+}
+
+// Function to move the "No" button randomly
+function moveNoButton() {
+    const randomTop = Math.random() * 80;  // 80% max to keep it in view
+    const randomLeft = Math.random() * 80;
+
+    noButton.style.position = "absolute";
+    noButton.style.top = `${randomTop}vh`;
+    noButton.style.left = `${randomLeft}vw`;
 }
